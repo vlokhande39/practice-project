@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+	<div style="color:tomato">
+		<form action="{{ url_for('predict')}}" method="post">
+			<h2>Predictive analysis</h2>
+			<h3>Undergraduate</h3>
+				<select id="first" name="Undergrad" required="required">
+					<option value="Yes">Yes</option>
+					<option value="NO">NO</option>
+				</select>
+			<h3>Marital status</h3>
+				<select id="second" name="Marital.Status" required="required">
+					<option value="Divorced">Divorced</option>
+					<option value="Single">Single</option>
+					<option value="Married">Married</option>
+				</select>
+			<h3>Urban</h3>
+				<select id="third" name="Urban" required="required">Urban</option>
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</select>
+			<h3>city population (min=25500 max=50000)</h3>
+				<input id="fourth" name="City.Population" required="required">
+			<h3>work experience (0-30)</h3>
+				<input id="fifth" name="Work.Experience" required="required">
+			<center><br><button type="submit" class="btn btn-primary btn-block btn-large">Predict</button></center>
+    </form>
+
+   <br>
+   <br>
+     <center><h1>{{ prediction_text }}</h1></center>
+			</h3>
+
+		</form>>
+	</div>
+</body>
